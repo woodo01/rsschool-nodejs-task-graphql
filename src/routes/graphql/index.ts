@@ -38,7 +38,6 @@ const plugin: FastifyPluginAsyncTypebox = async (fastify) => {
 
         return result;
       } catch (error: any) {
-        console.error('GraphQL Execution Error:', error);
         return { errors: [new GraphQLError(error.message)] };
       }
     },
